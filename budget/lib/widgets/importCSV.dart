@@ -890,7 +890,6 @@ class _ImportingEntriesPopupState extends State<ImportingEntriesPopup> {
     double? amount;
     amount = getAmountFromString(
         (row[assignedColumns["amount"]!["setHeaderIndex"]]).toString().trim());
-    if (amount == null) throw ("Unable to parse amount");
 
     // Handle Mint transaction types
     if (transactionTypeIndex != null) {

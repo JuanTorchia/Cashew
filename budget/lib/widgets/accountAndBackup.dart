@@ -492,9 +492,6 @@ Future<void> deleteRecentBackups(context, amountToKeep,
       $fields: 'files(id, name, modifiedTime, size)',
     );
     List<drive.File>? files = fileList.files;
-    if (files == null) {
-      throw "No backups found.";
-    }
 
     int index = 0;
     files.forEach((file) {

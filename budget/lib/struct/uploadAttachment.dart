@@ -137,8 +137,6 @@ Future<String?> uploadFileToDrive({
     folderId = createdFolder.id;
   }
 
-  if (folderId == null) throw ("Folder could not be created in Google Drive");
-
   drive.Media media = new drive.Media(mediaStream, fileBytes.length);
 
   drive.File driveFile = new drive.File();
